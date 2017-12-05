@@ -3,7 +3,6 @@ body {
   font-size: 18px;
   line-height: 34px;
   color: #777;
-  background: url("../images/concrete_seamless.png");
 }
 
 * {
@@ -150,8 +149,6 @@ h3,
   float: left;
   width: 100%;
   max-width: 650px;
-  padding: 30px;
-  margin: 0 0 40px;
   background: #fff;
   border: 1px solid #ddd;
 }
@@ -236,4 +233,96 @@ input[type=submit] {
   cursor: pointer;
   background: #4aaaa5;
   border: 0 none;
+}
+
+@media screen and (min-width: 769px) {
+/*
+  These rules take effect when the browser's width
+  is either 769px or more.
+*/
+  body {
+    background-color: blue;
+    background: url("../images/concrete_seamless.png");
+    color: black;
+  }
+
+  img {
+    display: block;
+    margin: auto;
+  }
+  
+  .main-section-640 {
+    display: none;
+  }
+
+  .main-section-768 {
+    display: none;
+  }
+
+ .main-section-980 {
+    display: block;
+ 
+  }
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+/*
+  These rules take effect when the browser's width
+  is between 641px and 768px.
+*/
+ 
+  body {
+    background-color: red;
+    color: white;
+  }
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  .main-section-640 {
+    display: none;
+  }
+
+  .main-section-768 {
+    display: block;
+ 
+  }
+
+ .main-section-980 {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 640px) {
+/*
+  These rules take effect when the browser's width
+  is either 640px or less.
+*/
+    /* The body's bg color will be #333 */
+  body {
+    background-color: green;
+    color: white;
+  }
+
+  img {
+    display: block;
+    margin: auto;;
+  }
+  
+  .main-section-640 {
+    display: block;
+
+  }
+
+  .main-section-768 {
+    display: none;
+  }
+
+ .main-section-980 {
+    display: none;
+  }
 }
