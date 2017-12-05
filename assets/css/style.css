@@ -10,7 +10,7 @@ body {
 }
 
 /* general */
-
+/* dont need
 .container {
   width: 100%;
   max-width: 960px;
@@ -48,9 +48,9 @@ h2,
 h3 {
   font-size: 22px;
 }
-
+*/
 /* header */
-
+/* dont need
 #masthead {
   position: fixed;
   z-index: 99;
@@ -94,9 +94,9 @@ nav a {
 nav a:first-child {
   border-left: 0 none;
 }
-
+*/
 /* footer */
-
+/* dont need
 footer {
   padding: 30px 0;
   clear: both;
@@ -107,9 +107,9 @@ footer {
   background: #666;
   border-top: 8px solid #4aaaa5;
 }
-
+*/
 /* sidebar */
-
+/* dont need
 .sidebar {
   float: right;
   width: 100%;
@@ -138,9 +138,9 @@ h3,
 .social:last-child {
   margin-right: 0;
 }
-
+*/
 /* main */
-
+/* dont need 
 #main-container {
   padding-top: 130px;
 }
@@ -152,9 +152,9 @@ h3,
   background: #fff;
   border: 1px solid #ddd;
 }
-
+*/
 /* portfolio page */
-
+/* dont need
 .work {
   position: relative;
   float: left;
@@ -194,9 +194,9 @@ h3,
   margin-top: 10px;
   margin-right: 25px;
 }
-
+*/
 /* contact page */
-
+/* dont need
 #contact-form ul {
   margin-bottom: 20px;
 }
@@ -234,7 +234,9 @@ input[type=submit] {
   background: #4aaaa5;
   border: 0 none;
 }
+*/
 
+/* responsive media queries */
 @media screen and (min-width: 769px) {
 /*
   These rules take effect when the browser's width
@@ -277,6 +279,10 @@ input[type=submit] {
     color: white;
   }
 
+  header {
+    position: static;
+  }
+
   img {
     display: block;
     margin: auto;
@@ -308,6 +314,10 @@ input[type=submit] {
     color: white;
   }
 
+  header {
+    position: static;
+  }
+  
   img {
     display: block;
     margin: auto;;
