@@ -3,6 +3,7 @@ body {
   font-size: 18px;
   line-height: 34px;
   color: #777;
+  background: url("../images/concrete_seamless.png");
 }
 
 * {
@@ -10,7 +11,6 @@ body {
 }
 
 /* general */
-/* dont need
 .container {
   width: 100%;
   max-width: 960px;
@@ -48,9 +48,9 @@ h2,
 h3 {
   font-size: 22px;
 }
-*/
+
 /* header */
-/* dont need
+
 #masthead {
   position: fixed;
   z-index: 99;
@@ -64,7 +64,7 @@ h3 {
 
 #logo {
   float: left;
-  width: 250px;
+  width: auto;  
   height: 90px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
@@ -74,6 +74,8 @@ h3 {
   text-align: center;
   text-decoration: none;
   background: #4aaaa5;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 nav {
@@ -94,22 +96,21 @@ nav a {
 nav a:first-child {
   border-left: 0 none;
 }
-*/
+
 /* footer */
-/* dont need
+
 footer {
   padding: 30px 0;
   clear: both;
   font-size: 12px;
-  color: #fff;
   color: #ccc;
   text-align: center;
   background: #666;
   border-top: 8px solid #4aaaa5;
 }
-*/
+
 /* sidebar */
-/* dont need
+
 .sidebar {
   float: right;
   width: 100%;
@@ -138,9 +139,9 @@ h3,
 .social:last-child {
   margin-right: 0;
 }
-*/
+
 /* main */
-/* dont need 
+
 #main-container {
   padding-top: 130px;
 }
@@ -149,12 +150,14 @@ h3,
   float: left;
   width: 100%;
   max-width: 650px;
+  padding: 30px;
+  margin: 0 0 40px;
   background: #fff;
   border: 1px solid #ddd;
 }
-*/
+
 /* portfolio page */
-/* dont need
+
 .work {
   position: relative;
   float: left;
@@ -189,14 +192,15 @@ h3,
 
 .auth-image {
   float: left;
-  width: 200px;
+  width: 450px; /* wider image */
+/* width: 200px;*/
   height: auto;
   margin-top: 10px;
   margin-right: 25px;
 }
-*/
+
 /* contact page */
-/* dont need
+
 #contact-form ul {
   margin-bottom: 20px;
 }
@@ -234,7 +238,6 @@ input[type=submit] {
   background: #4aaaa5;
   border: 0 none;
 }
-*/
 
 /* responsive media queries */
 @media screen and (min-width: 769px) {
@@ -242,29 +245,25 @@ input[type=submit] {
   These rules take effect when the browser's width
   is either 769px or more.
 */
-  body {
-    background-color: blue;
-    background: url("../images/concrete_seamless.png");
-    color: black;
-  }
+ /* debugging show screen size */
+  #logo {
+    color: lighblue;
+  } 
+	
+#breakAfter {
+  display: block;
+  clear: both;
+}	
 
-  img {
-    display: block;
-    margin: auto;
-  }
-  
-  .main-section-640 {
-    display: none;
-  }
-
-  .main-section-768 {
-    display: none;
-  }
-
- .main-section-980 {
-    display: block;
- 
-  }
+/* todo center work img */
+.work {
+		float: none; /* images float below each other */
+		width: 450px; /* larger images*/
+	}
+	
+.work img {
+	display:block;
+}
 
 }
 
@@ -273,66 +272,56 @@ input[type=submit] {
   These rules take effect when the browser's width
   is between 641px and 768px.
 */
- 
-  body {
-    background-color: red;
-    color: white;
+ /* debugging show screen size */
+ #logo {
+    color: indianred;
   }
 
-  header {
-    position: static;
-  }
+ .sidebar {
+  /*float: right;*/
+  float:none;
+  width: 100%;
+  max-width: 650px;
+  margin:20px;
+  clear:both;	
+}
 
-  img {
-    display: block;
-    margin: auto;
-  }
-
-  .main-section-640 {
-    display: none;
-  }
-
-  .main-section-768 {
-    display: block;
- 
-  }
-
- .main-section-980 {
-    display: none;
-  }
+.main-section {
+  margin: 20px;
+}
 
 }
 
-@media screen and (min-width: 0px) and (max-width: 640px) {
+
+ @media screen and (min-width: 0px) and (max-width: 640px) {
 /*
   These rules take effect when the browser's width
   is either 640px or less.
 */
-    /* The body's bg color will be #333 */
-  body {
-    background-color: green;
-    color: white;
-  }
-
-  header {
-    position: static;
-  }
-  
-  img {
-    display: block;
-    margin: auto;;
-  }
-  
-  .main-section-640 {
-    display: block;
-
-  }
-
-  .main-section-768 {
-    display: none;
-  }
-
- .main-section-980 {
-    display: none;
-  }
+/* debugging show screen size */ 
+#logo {
+   color: lime; /* GREEN */
+   display: inline-block;
 }
+	 
+#breakAfter {
+  display: block;
+  clear: both;
+}
+
+ .sidebar {
+  /*float: right;*/
+  float:none;
+  width: 100%;
+  max-width: 650px;
+  margin:20px;
+  clear:both;	
+}
+
+.main-section {
+  margin: 20px;
+}
+
+	 
+}
+
